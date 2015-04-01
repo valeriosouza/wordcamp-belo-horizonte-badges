@@ -8,7 +8,7 @@
 /* {margin:0;padding:0;}*/
 
 
-.wordcamp-miami-badges-modal-content {
+.wordcamp-belohorizonte-badges-modal-content {
   background: none repeat scroll 0 0 #FFFFFF;
   bottom: 0;
   left: 0;
@@ -21,13 +21,13 @@
   top: 0;
   width: 100%;
 }
-.wordcamp-miami-badges-options-form {
+.wordcamp-belohorizonte-badges-options-form {
   position: relative;
 }
-.wordcamp-miami-badges-options-form .submit {
+.wordcamp-belohorizonte-badges-options-form .submit {
   clear: both;
 }
-.wordcamp-miami-badges-settings-config-content {
+.wordcamp-belohorizonte-badges-settings-config-content {
   margin-left: 147px;
   background-color: #fff;
   padding-right: 10px;
@@ -35,63 +35,63 @@
   min-height: 200px;
   box-shadow: 1px 1px 1px -1px rgba(0,0,0,.1);
 }
-.wordcamp-miami-badges-settings-config-content.full{
+.wordcamp-belohorizonte-badges-settings-config-content.full{
   margin-left: 0;
   border-left: 0;
   padding-left: 0;
   width: 500px;
 }
-.wordcamp-miami-badges_widget_label,.wordcamp-miami-badges_settings_label {
+.wordcamp-belohorizonte-badges_widget_label,.wordcamp-belohorizonte-badges_settings_label {
   cursor: pointer;
   display: inline-block;
   min-width: 80px;
 }
-.wordcamp-miami-badges-metabox-config-content {
+.wordcamp-belohorizonte-badges-metabox-config-content {
   margin-left: 122px;
   border-left: 1px solid #F5F5F5;
   padding-left: 10px;
 }
-.wordcamp-miami-badges-metabox-config-content.full{
+.wordcamp-belohorizonte-badges-metabox-config-content.full{
   margin-left: 0;
   border-left: 0;
   padding-left: 0;
 }
-.wordcamp-miami-badges-widget-config-content {
+.wordcamp-belohorizonte-badges-widget-config-content {
   margin-left: 130px;
   max-height: 500px;
   overflow: auto;
   width: 363px;
 }
-.wordcamp-miami-badges-widget-config-content.full {
+.wordcamp-belohorizonte-badges-widget-config-content.full {
   margin-left: -9px;
   max-height: 100%;
   overflow: visible;
   width: auto;
 }
-.wordcamp-miami-badges-settings-config-content h3 ,
-.wordcamp-miami-badges-metabox-config-content h3 ,
-.wordcamp-miami-badges-widget-config-content h3 {
+.wordcamp-belohorizonte-badges-settings-config-content h3 ,
+.wordcamp-belohorizonte-badges-metabox-config-content h3 ,
+.wordcamp-belohorizonte-badges-widget-config-content h3 {
   border-bottom: 1px solid #DFDFDF;
   font-weight: normal;
   margin: 0 0 10px 0;
   padding: 10px 0 5px;
 }
-.wordcamp-miami-badges-metabox-config-content h3.metaheader {
+.wordcamp-belohorizonte-badges-metabox-config-content h3.metaheader {
   padding: 7px 0 !important;
   font-weight: bold;
   cursor: default !important;
 }
-.wordcamp-miami-badges-groupbox {
+.wordcamp-belohorizonte-badges-groupbox {
   border-left: 1px solid #EBEBEB;
   padding: 1px 0 0 10px;
 }
-.wordcamp-miami-badges-field-row {
+.wordcamp-belohorizonte-badges-field-row {
   margin: 0 0 15px 0;
 }
-.full .wordcamp-miami-badges-groupbox {
+.full .wordcamp-belohorizonte-badges-groupbox {
   border: none;
 }
-.wordcamp-miami-badges-groupbox .groupitems {
+.wordcamp-belohorizonte-badges-groupbox .groupitems {
   margin-bottom: 5px;
   position: relative;
 }
@@ -100,7 +100,7 @@
   border-bottom: 1px solid #DFDFDF;
   margin: 10px 0 5px;
 }
-.wordcamp-miami-badges-modal-modal {
+.wordcamp-belohorizonte-badges-modal-modal {
   bottom: 30px;
   left: 30px;
   position: fixed;
@@ -108,7 +108,7 @@
   top: 30px;
   z-index: 300010;
 }
-.wordcamp-miami-badges-modal-footer {
+.wordcamp-belohorizonte-badges-modal-footer {
   background-color: #F1F1F1;
   border-top: 1px solid #E1E1E1;
   bottom: 0;
@@ -118,22 +118,22 @@
   right: 0;
   text-align: right;
 }
-.wordcamp-miami-badges-modal-header > h2 {
+.wordcamp-belohorizonte-badges-modal-header > h2 {
   border-bottom: 1px solid #EFEFEF;
   font-weight: 300;
   margin: 0 0 5px;
   padding: 0 0 10px;
 }
-.wordcamp-miami-badges-modal-header > h2 small{
+.wordcamp-belohorizonte-badges-modal-header > h2 small{
   font-size: 14px;
   color: #BCBCBC;
 }
-.wordcamp-miami-badges-shortcode-name {
+.wordcamp-belohorizonte-badges-shortcode-name {
   font-weight: 300;
   margin: 0 0 5px;
   padding: 3px 0 10px 1px; 
 }
-.wordcamp-miami-badges-shortcode-config {
+.wordcamp-belohorizonte-badges-shortcode-config {
   border-top: 1px solid #EFEFEF;
   bottom: 50px;
   left: 15px;
@@ -142,7 +142,7 @@
   top: 85px;
 }
 
-.wordcamp-miami-badges-shortcode-config-content {
+.wordcamp-belohorizonte-badges-shortcode-config-content {
   border-left: 1px solid #EFEFEF;
   bottom: 0;
   overflow: auto;
@@ -152,125 +152,125 @@
   top: 0;
   width: 495px;
 }
-h3.wordcamp-miami-badges-config-header{
+h3.wordcamp-belohorizonte-badges-config-header{
   border-bottom: 1px solid #F5F5F5;
   font-weight: 300;
   margin: 7px 0;
   padding-bottom: 7px;  
 }
 
-.wordcamp-miami-badges-settings-config-nav {
+.wordcamp-belohorizonte-badges-settings-config-nav {
   left: -22px;
   position: absolute;
   top: 0;
   width: 170px;
 }
-.wordcamp-miami-badges-widget-config-nav {
+.wordcamp-belohorizonte-badges-widget-config-nav {
   bottom: 0;
   left: -15px;
   position: absolute;
   top: 0;
   width: 145px;
 }
-.wordcamp-miami-badges-shortcode-config-nav,
-.wordcamp-miami-badges-metabox-config-nav {
+.wordcamp-belohorizonte-badges-shortcode-config-nav,
+.wordcamp-belohorizonte-badges-metabox-config-nav {
   bottom: 0;
   left: 0;
   position: absolute;
   top: 0;
   width: 145px;
 }
-.wordcamp-miami-badges-metabox-config-nav {
+.wordcamp-belohorizonte-badges-metabox-config-nav {
   width: 135px;
 }
-.wordcamp-miami-badges-settings-config-nav > ul,
-.wordcamp-miami-badges-widget-config-nav > ul,
-.wordcamp-miami-badges-metabox-config-nav > ul,
-.wordcamp-miami-badges-shortcode-config-nav > ul {
+.wordcamp-belohorizonte-badges-settings-config-nav > ul,
+.wordcamp-belohorizonte-badges-widget-config-nav > ul,
+.wordcamp-belohorizonte-badges-metabox-config-nav > ul,
+.wordcamp-belohorizonte-badges-shortcode-config-nav > ul {
   margin: 5px 0 0;
 }
-.wordcamp-miami-badges-settings-config-nav a,
-.wordcamp-miami-badges-widget-config-nav a,
-.wordcamp-miami-badges-metabox-config-nav a,
-.wordcamp-miami-badges-shortcode-config-nav a {
+.wordcamp-belohorizonte-badges-settings-config-nav a,
+.wordcamp-belohorizonte-badges-widget-config-nav a,
+.wordcamp-belohorizonte-badges-metabox-config-nav a,
+.wordcamp-belohorizonte-badges-shortcode-config-nav a {
   display: block;
   font-weight: 300;
   padding: 7px 0 6px 15px;
   text-decoration: none;
 }
-.wordcamp-miami-badges-settings-config-nav a {
+.wordcamp-belohorizonte-badges-settings-config-nav a {
   padding: 7px 0 6px 22px;
 }
-.wordcamp-miami-badges-settings-config-nav li,
-.wordcamp-miami-badges-widget-config-nav li,
-.wordcamp-miami-badges-metabox-config-nav li,
-.wordcamp-miami-badges-shortcode-config-nav li {
+.wordcamp-belohorizonte-badges-settings-config-nav li,
+.wordcamp-belohorizonte-badges-widget-config-nav li,
+.wordcamp-belohorizonte-badges-metabox-config-nav li,
+.wordcamp-belohorizonte-badges-shortcode-config-nav li {
   margin: 0;
 }
-.wordcamp-miami-badges-shortcode-config-nav li.current {
+.wordcamp-belohorizonte-badges-shortcode-config-nav li.current {
   background: none repeat scroll 0 0 #efefef;
 }
-.wordcamp-miami-badges-settings-config-nav li.current{
+.wordcamp-belohorizonte-badges-settings-config-nav li.current{
   background: none repeat scroll 0 0 #fff;
 }
-.wordcamp-miami-badges-metabox-config-nav li.current,
-.wordcamp-miami-badges-widget-config-nav li.current {
+.wordcamp-belohorizonte-badges-metabox-config-nav li.current,
+.wordcamp-belohorizonte-badges-widget-config-nav li.current {
   background: none repeat scroll 0 0 #f5f5f5;
   box-shadow: none;
 }
-.wordcamp-miami-badges-shortcode-config-content .rowGroup {
+.wordcamp-belohorizonte-badges-shortcode-config-content .rowGroup {
   border-bottom: 1px dashed #EFEFEF;
   margin: 0 0 10px;
 }
-.wordcamp-miami-badges-addRow {
+.wordcamp-belohorizonte-badges-addRow {
   padding: 5px 0 10px;
 }
 .toolrow {
   margin-bottom: 5px;
 }
-.wordcamp-miami-badges-shortcode-config-content .form-table th {
+.wordcamp-belohorizonte-badges-shortcode-config-content .form-table th {
   width: 100px;
 }
-.wordcamp-miami-badges-shortcode-config-content input.regular-text {
+.wordcamp-belohorizonte-badges-shortcode-config-content input.regular-text {
   width: 23em;
 }
-.wordcamp-miami-badges-shortcode-config-content textarea.regular-text.full,
-.wordcamp-miami-badges-shortcode-config-content input.regular-text.full {
+.wordcamp-belohorizonte-badges-shortcode-config-content textarea.regular-text.full,
+.wordcamp-belohorizonte-badges-shortcode-config-content input.regular-text.full {
   width: 99%;
 }
-.wordcamp-miami-badges-settings-config-content label {
+.wordcamp-belohorizonte-badges-settings-config-content label {
   margin: 0 0 3px;
 }
-#side-sortables .wordcamp-miami-badges-metabox-config-content{
+#side-sortables .wordcamp-belohorizonte-badges-metabox-config-content{
   margin-left: 0;
   border-left: 0;
   padding-left: 0;
 }
 
 @media only screen and (min-width: 850px) {
-  #side-sortables .wordcamp-miami-badges-metabox-config-nav {
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-nav {
     clear: both;
     position: relative;
     width: 100%;
   }
-  #side-sortables .wordcamp-miami-badges-metabox-config-nav li{
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-nav li{
     display: inline-block;
     width: auto;
   }
-  #side-sortables .wordcamp-miami-badges-metabox-config-nav li a{
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-nav li a{
     padding-right: 15px;
   }
-  #side-sortables .wordcamp-miami-badges-metabox-config-content .metaheader{
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-content .metaheader{
     display: none;
   }
-  #side-sortables .wordcamp-miami-badges-metabox-config-nav {
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-nav {
     border-bottom: 1px solid #EFEFEF;
     }
-  #side-sortables .wordcamp-miami-badges-metabox-config-content.group {
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-content.group {
     margin: 0;
   }
-  #side-sortables .wordcamp-miami-badges-metabox-config-content.group table th,
-  #side-sortables .wordcamp-miami-badges-metabox-config-content.group table td {
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-content.group table th,
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-content.group table td {
     display: inline-block;
     min-width: 70px;
     width: auto;
@@ -278,8 +278,8 @@ h3.wordcamp-miami-badges-config-header{
   }
 }
 @media only screen and (max-width: 850px) {
-  #side-sortables .wordcamp-miami-badges-metabox-config-content.group table th,
-  #side-sortables .wordcamp-miami-badges-metabox-config-content.group table td {
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-content.group table th,
+  #side-sortables .wordcamp-belohorizonte-badges-metabox-config-content.group table td {
     display: inline-block;
     min-width: 170px;
     height: 30px;
@@ -495,7 +495,7 @@ textarea.regular-text.full{ width: 300px;}
   max-width: 450px;
   
 }
-.imgpreview .wordcamp_miami_badges_media_select {
+.imgpreview .wordcamp_belohorizonte_badges_media_select {
   display: inline-block;
   margin-top: 47px;
 }
@@ -526,7 +526,7 @@ textarea.regular-text.full{ width: 300px;}
     background-color: rgba(255, 255, 255, 0.9);
 }
 .widget-table .imgpreview {margin-bottom: 15px; }
-.filechanger-btn.wordcamp_miami_badges_media_select {
+.filechanger-btn.wordcamp_belohorizonte_badges_media_select {
   display: none;
 }
 .imgpreview:hover .sizes,
@@ -547,7 +547,7 @@ img.filepreview {
   top: 49px;
   left: 0;
 }
-.filechanger-btn.wordcamp-miami-badges_uploader {
+.filechanger-btn.wordcamp-belohorizonte-badges_uploader {
     margin-left: 10px;
 }
 

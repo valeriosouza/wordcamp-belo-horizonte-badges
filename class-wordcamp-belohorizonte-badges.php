@@ -1,20 +1,20 @@
 <?php
 /**
- * Wordcamp Miami Badges.
+ * WordCamp Belo Horizonte Badges.
  *
- * @package   Wordcamp_Miami_Badges
+ * @package   WordCamp_Belohorizonte_Badges
  * @author    Myles McNamara <myles@smyl.es>
  * @license   GPL-2.0+
  * @link      http://smyl.es
- * @copyright 2014 Myles McNamara
+ * @copyright 2015 Myles McNamara
  */
 
 /**
  * Plugin class.
- * @package Wordcamp_Miami_Badges
+ * @package WordCamp_Belohorizonte_Badges
  * @author  Myles McNamara <myles@smyl.es>
  */
-class Wordcamp_Miami_Badges {
+class WordCamp_Belohorizonte_Badges {
 
 	/**
 	 * @var     string
@@ -23,7 +23,7 @@ class Wordcamp_Miami_Badges {
 	/**
 	 * @var      string
 	 */
-	protected $plugin_slug = 'wordcamp-miami-badges';
+	protected $plugin_slug = 'wordcamp-belohorizonte-badges';
 	/**
 	 * @var      object
 	 */
@@ -74,10 +74,10 @@ class Wordcamp_Miami_Badges {
 			add_action( 'admin_footer', array( $this, 'shortcode_modal_template' ) );
 		}
 // Add shortcodes
-		add_shortcode('wordcamp_miami_badge', array($this, 'render_element'));
+		add_shortcode('wordcamp_belohorizonte_badge', array($this, 'render_element'));
 		$this->elements = array_merge($this->elements, array(
 			'shortcodes'			=>	array(
-				'wordcamp_miami_badge' 			=> '1',
+				'wordcamp_belohorizonte_badge' 			=> '1',
 			)
 		));
 
@@ -343,8 +343,8 @@ class Wordcamp_Miami_Badges {
 	function shortcode_insert_button(){
 		global $post;
 		if(!empty($post)){
-			echo "<a id=\"wordcamp-miami-badges-shortcodeinsert\" title=\"".__('Wordcamp Miami Badges Shortcode Builder','wordcamp-miami-badges')."\" style=\"padding-left: 0.4em;\" class=\"button wordcamp-miami-badges-editor-button\" href=\"#inst\">\n";
-			echo "	<img src=\"". self::get_url( __FILE__ ) . "assets/images/icon.png\" alt=\"".__("Insert Shortcode","wordcamp-miami-badges")."\" style=\"padding:0 2px 1px;\" /> ".__('Wordcamp Miami Badges', 'wordcamp-miami-badges')."\n";
+			echo "<a id=\"wordcamp-belohorizonte-badges-shortcodeinsert\" title=\"".__('WordCamp Belo Horizonte Badges Shortcode Builder','wordcamp-belohorizonte-badges')."\" style=\"padding-left: 0.4em;\" class=\"button wordcamp-belohorizonte-badges-editor-button\" href=\"#inst\">\n";
+			echo "	<img src=\"". self::get_url( __FILE__ ) . "assets/images/icon.png\" alt=\"".__("Insert Shortcode","wordcamp-belohorizonte-badges")."\" style=\"padding:0 2px 1px;\" /> ".__('WordCamp Belo Horizonte Badges', 'wordcamp-belohorizonte-badges')."\n";
 			echo "</a>\n";
 		}
 	}
@@ -359,11 +359,11 @@ class Wordcamp_Miami_Badges {
 
 
 		if(!empty($template)){
-			echo "<script type=\"text/html\" id=\"wordcamp-miami-badges-".$shortcode."-config-tmpl\">\r\n";
+			echo "<script type=\"text/html\" id=\"wordcamp-belohorizonte-badges-".$shortcode."-config-tmpl\">\r\n";
 		}
-		echo "<input id=\"wordcamp-miami-badges-shortcodekey\" class=\"configexclude\" type=\"hidden\" value=\"".$shortcode."\">\r\n";
-		echo "<input id=\"wordcamp-miami-badges-shortcodetype\" class=\"configexclude\" type=\"hidden\" value=\"".$type."\">\r\n";
-		echo "<input id=\"wordcamp-miami-badges-default-content\" class=\"configexclude\" type=\"hidden\" value=\" ".__('Your content goes here','wordcamp-miami-badges')." \">\r\n";
+		echo "<input id=\"wordcamp-belohorizonte-badges-shortcodekey\" class=\"configexclude\" type=\"hidden\" value=\"".$shortcode."\">\r\n";
+		echo "<input id=\"wordcamp-belohorizonte-badges-shortcodetype\" class=\"configexclude\" type=\"hidden\" value=\"".$type."\">\r\n";
+		echo "<input id=\"wordcamp-belohorizonte-badges-default-content\" class=\"configexclude\" type=\"hidden\" value=\" ".__('Your content goes here','wordcamp-belohorizonte-badges')." \">\r\n";
 
 		if(!empty($this->elements['posttypes'][$shortcode])){
 			$posts = get_posts(array('post_type' => $shortcode));
@@ -391,7 +391,7 @@ class Wordcamp_Miami_Badges {
 		}
 
 		$groups = array();
-		echo "<div class=\"wordcamp-miami-badges-shortcode-config-nav\">\r\n";
+		echo "<div class=\"wordcamp-belohorizonte-badges-shortcode-config-nav\">\r\n";
 		echo "	<ul>\r\n";
 		foreach ($configfiles as $key=>$fieldfile) {
 			include $fieldfile;
@@ -403,10 +403,10 @@ class Wordcamp_Miami_Badges {
 		echo "	</ul>\r\n";
 		echo "</div>\r\n";
 
-		echo "<div class=\"wordcamp-miami-badges-shortcode-config-content " . ( count($configfiles) > 1 ? "" : "full" ) . "\">\r\n";
+		echo "<div class=\"wordcamp-belohorizonte-badges-shortcode-config-content " . ( count($configfiles) > 1 ? "" : "full" ) . "\">\r\n";
 			foreach($groups as $key=>$group){
 				echo "<div class=\"group\" " . ( $key === 0 ? "" : "style=\"display:none;\"" ) . " id=\"row".$group['master']."\">\r\n";
-				echo "<h3 class=\"wordcamp-miami-badges-config-header\">".$group['label']."</h3>\r\n";
+				echo "<h3 class=\"wordcamp-belohorizonte-badges-config-header\">".$group['label']."</h3>\r\n";
 				echo "<table class=\"form-table rowGroup groupitems\" id=\"groupitems\" ref=\"items\">\r\n";
 				echo "	<tbody>\r\n";
 					foreach($group['fields'] as $field=>$settings){
@@ -437,7 +437,7 @@ class Wordcamp_Miami_Badges {
 				echo "</table>\r\n";
 
 				if(!empty($group['multiple'])){
-					echo "<div class=\"toolrow\"><button class=\"button wordcamp-miami-badges-add-group-row\" type=\"button\" data-rowtemplate=\"group-".$group['id']."-tmpl\">".__('Add Another','wordcamp-miami-badges')."</button></div>\r\n";
+					echo "<div class=\"toolrow\"><button class=\"button wordcamp-belohorizonte-badges-add-group-row\" type=\"button\" data-rowtemplate=\"group-".$group['id']."-tmpl\">".__('Add Another','wordcamp-belohorizonte-badges')."</button></div>\r\n";
 				}
 				echo "</div>\r\n";
 			}
@@ -451,7 +451,7 @@ class Wordcamp_Miami_Badges {
 			// Place html template for repeated fields.
 			if(!empty($group['multiple'])){
 				echo "<script type=\"text/html\" id=\"group-".$group['id']."-tmpl\">\r\n";
-				echo '  <div class="button button-primary right wordcamp-miami-badges-removeRow" style="margin:5px 5px 0;">'.__('Remove','wordcamp-miami-badges').'</div>';
+				echo '  <div class="button button-primary right wordcamp-belohorizonte-badges-removeRow" style="margin:5px 5px 0;">'.__('Remove','wordcamp-belohorizonte-badges').'</div>';
 				echo "	<table class=\"form-table rowGroup groupitems\" id=\"groupitems\" ref=\"items\">\r\n";
 				echo "		<tbody>\r\n";
 					foreach($group['fields'] as $field=>$settings){
@@ -493,26 +493,26 @@ class Wordcamp_Miami_Badges {
 
 		if($screen->base != 'post'){return;}
 
-		echo "<script type=\"text/html\" id=\"wordcamp-miami-badges-shortcode-panel-tmpl\">\r\n";
-		echo "	<div tabindex=\"0\" id=\"wordcamp-miami-badges-shortcode-panel\" class=\"hidden\">\r\n";
+		echo "<script type=\"text/html\" id=\"wordcamp-belohorizonte-badges-shortcode-panel-tmpl\">\r\n";
+		echo "	<div tabindex=\"0\" id=\"wordcamp-belohorizonte-badges-shortcode-panel\" class=\"hidden\">\r\n";
 		echo "		<div class=\"media-modal-backdrop\"></div>\r\n";
-		echo "		<div class=\"wordcamp-miami-badges-modal-modal\">\r\n";
-		echo "			<div class=\"wordcamp-miami-badges-modal-content\">\r\n";
-		echo "				<div class=\"wordcamp-miami-badges-modal-header\">\r\n";
+		echo "		<div class=\"wordcamp-belohorizonte-badges-modal-modal\">\r\n";
+		echo "			<div class=\"wordcamp-belohorizonte-badges-modal-content\">\r\n";
+		echo "				<div class=\"wordcamp-belohorizonte-badges-modal-header\">\r\n";
 		echo "					<a title=\"Close\" href=\"#\" class=\"media-modal-close\">\r\n";
 		echo "						<span class=\"media-modal-icon\"></span>\r\n";
 		echo "					</a>\r\n";
-		echo "					<h2 style=\"background: url(".self::get_url( '/assets/images/icon.png', __FILE__ ) . ") no-repeat scroll 0px 2px transparent; padding-left: 20px;\">".__('Wordcamp Miami Badges','wordcamp-miami-badges')." <small>".__("Shortcode Builder","wordcamp-miami-badges")."</small></h2>\r\n";
+		echo "					<h2 style=\"background: url(".self::get_url( '/assets/images/icon.png', __FILE__ ) . ") no-repeat scroll 0px 2px transparent; padding-left: 20px;\">".__('WordCamp Belo Horizonte Badges','wordcamp-belohorizonte-badges')." <small>".__("Shortcode Builder","wordcamp-belohorizonte-badges")."</small></h2>\r\n";
 		echo "				</div>\r\n";
-		echo "				<div class=\"wordcamp-miami-badges-modal-body\">\r\n";
-		echo "					<span id=\"wordcamp-miami-badges-categories\">\r\n";
-		echo "						<div class=\"wordcamp-miami-badges-shortcode-name\">".__('Wordcamp Miami Badges','wordcamp-miami-badges')."</div><span class=\"wordcamp-miami-badges-autoload\" data-shortcode=\"wordcamp_miami_badge\"></span>\r\n";
+		echo "				<div class=\"wordcamp-belohorizonte-badges-modal-body\">\r\n";
+		echo "					<span id=\"wordcamp-belohorizonte-badges-categories\">\r\n";
+		echo "						<div class=\"wordcamp-belohorizonte-badges-shortcode-name\">".__('WordCamp Belo Horizonte Badges','wordcamp-belohorizonte-badges')."</div><span class=\"wordcamp-belohorizonte-badges-autoload\" data-shortcode=\"wordcamp_belohorizonte_badge\"></span>\r\n";
 		echo "					</span>\r\n";
-		echo "					<div id=\"wordcamp-miami-badges-shortcode-config\" class=\"wordcamp-miami-badges-shortcode-config\">\r\n";
+		echo "					<div id=\"wordcamp-belohorizonte-badges-shortcode-config\" class=\"wordcamp-belohorizonte-badges-shortcode-config\">\r\n";
 		echo "					</div>\r\n";
 		echo "				</div>\r\n";
-		echo "				<div class=\"wordcamp-miami-badges-modal-footer\">\r\n";
-		echo "					<button class=\"button button-primary button-large\" id=\"wordcamp-miami-badges-insert-shortcode\">".__("Insert Shortcode","wordcamp-miami-badges")."</button>\r\n";
+		echo "				<div class=\"wordcamp-belohorizonte-badges-modal-footer\">\r\n";
+		echo "					<button class=\"button button-primary button-large\" id=\"wordcamp-belohorizonte-badges-insert-shortcode\">".__("Insert Shortcode","wordcamp-belohorizonte-badges")."</button>\r\n";
 		echo "				</div>\r\n";
 		echo "			</div>\r\n";
 		echo "		</div>\r\n";
@@ -598,8 +598,8 @@ class Wordcamp_Miami_Badges {
 		if(!empty($key)){
 
 			//$configfiles = glob(self::get_path( __FILE__ ) .'configs/*.php');
-			if(file_exists(self::get_path( __FILE__ ) .'configs/fieldgroups-wordcamp_miami_badges.php')){
-				include self::get_path( __FILE__ ) .'configs/fieldgroups-wordcamp_miami_badges.php';		
+			if(file_exists(self::get_path( __FILE__ ) .'configs/fieldgroups-wordcamp_belohorizonte_badges.php')){
+				include self::get_path( __FILE__ ) .'configs/fieldgroups-wordcamp_belohorizonte_badges.php';		
 			}else{
 				return;
 			}
@@ -612,7 +612,7 @@ class Wordcamp_Miami_Badges {
 					break;
 				}
 			}
-			$key = 'wordcamp_miami_badges_' . $key;
+			$key = 'wordcamp_belohorizonte_badges_' . $key;
 		}
 		if( false === $single){
 			$metas = get_post_meta( $id, $key );
@@ -633,10 +633,10 @@ class Wordcamp_Miami_Badges {
 	 */
 	function save_post_metaboxes($pid, $post){
 
-		if(!isset($_POST['wordcamp_miami_badges_metabox']) || !isset($_POST['wordcamp_miami_badges_metabox_prefix'])){return;}
+		if(!isset($_POST['wordcamp_belohorizonte_badges_metabox']) || !isset($_POST['wordcamp_belohorizonte_badges_metabox_prefix'])){return;}
 
 
-		if(!wp_verify_nonce($_POST['wordcamp_miami_badges_metabox'], plugin_basename(__FILE__))){
+		if(!wp_verify_nonce($_POST['wordcamp_belohorizonte_badges_metabox'], plugin_basename(__FILE__))){
 			return $post->ID;
 		}
 		if(!current_user_can( 'edit_post', $post->ID)){
@@ -644,17 +644,17 @@ class Wordcamp_Miami_Badges {
 		}
 		if($post->post_type == 'revision' ){return;}
 		
-		foreach( $_POST['wordcamp_miami_badges_metabox_prefix'] as $prefix ){
+		foreach( $_POST['wordcamp_belohorizonte_badges_metabox_prefix'] as $prefix ){
 			if(!isset($_POST[$prefix])){continue;}
 
 			
 			delete_post_meta($post->ID, $prefix);
 			add_post_meta($post->ID, $prefix, $_POST[$prefix]);
-			//foreach($_POST['wordcamp_miami_badges'] as $field=>$data){
+			//foreach($_POST['wordcamp_belohorizonte_badges'] as $field=>$data){
 				
 				//if(is_array($data)){
 				//	foreach($data as $item){
-				//		add_post_meta($post->ID, 'wordcamp_miami_badges_'.$field, $item);
+				//		add_post_meta($post->ID, 'wordcamp_belohorizonte_badges_'.$field, $item);
 				//	}
 				//}else{
 				
@@ -686,9 +686,9 @@ class Wordcamp_Miami_Badges {
 		
 
 		if(!empty($head)){
-			$instanceID = $this->element_instance_id('wordcamp_miami_badges'.$slug, 'header');
+			$instanceID = $this->element_instance_id('wordcamp_belohorizonte_badges'.$slug, 'header');
 		}else{
-			$instanceID = $this->element_instance_id('wordcamp_miami_badges'.$slug, 'footer');
+			$instanceID = $this->element_instance_id('wordcamp_belohorizonte_badges'.$slug, 'footer');
 		}
 
 		//$configfiles = glob(self::get_path( __FILE__ ) .'configs/'.$slug.'-*.php');

@@ -1,6 +1,6 @@
 <?php
 
-class Widget_wordcamp_miami_badge extends WP_Widget {
+class Widget_wordcamp_belohorizonte_badge extends WP_Widget {
 
 	/*--------------------------------------------------*/
 	/* Constructor
@@ -16,10 +16,10 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 		add_action( 'init', array( $this, 'widget_textdomain' ) );
 
 		parent::__construct(
-			'wordcamp_miami_badge-id',
-			__( 'Wordcamp Miami Badges', 'wordcamp-miami-badges' ),
+			'wordcamp_belohorizonte_badge-id',
+			__( 'WordCamp Belo Horizonte Badges', 'wordcamp-belohorizonte-badges' ),
 			array(
-				'description'	=>	__( 'Display a 2014 Wordcamp Miami Badge.', 'wordcamp-miami-badges' )
+				'description'	=>	__( 'Display a 2015 WordCamp Belo Horizonte Badge.', 'wordcamp-belohorizonte-badges' )
 			)
 		);
 
@@ -57,8 +57,8 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 		
 		//dump($instance);
 		// TODO: Here is where you manipulate your widget's values based on their input fields
-		$element = Wordcamp_Miami_Badges::get_instance();
-		echo $element->render_element($instance, '', 'wordcamp_miami_badge');		
+		$element = WordCamp_Belohorizonte_Badges::get_instance();
+		echo $element->render_element($instance, '', 'wordcamp_belohorizonte_badge');		
 
 		echo $after_widget;
 
@@ -91,14 +91,14 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 		);
 		
 		// Display the admin form
-		//$configfiles = glob( self::get_path( dirname( __FILE__ ) ) .'configs/wordcamp_miami_badge-*.php' );
-		if(file_exists(self::get_path( dirname( __FILE__ ) ) .'configs/fieldgroups-wordcamp_miami_badge.php')){
-			include self::get_path( dirname( __FILE__ ) ) .'configs/fieldgroups-wordcamp_miami_badge.php';		
+		//$configfiles = glob( self::get_path( dirname( __FILE__ ) ) .'configs/wordcamp_belohorizonte_badge-*.php' );
+		if(file_exists(self::get_path( dirname( __FILE__ ) ) .'configs/fieldgroups-wordcamp_belohorizonte_badge.php')){
+			include self::get_path( dirname( __FILE__ ) ) .'configs/fieldgroups-wordcamp_belohorizonte_badge.php';		
 		}else{
 			return;
 		}
 
-		echo "<input type=\"hidden\" name=\"wordcamp_miami_badges-widget\">\r\n";
+		echo "<input type=\"hidden\" name=\"wordcamp_belohorizonte_badges-widget\">\r\n";
 		$groups = array();
 		$setsize = 'full';
 
@@ -107,14 +107,14 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 
 		foreach ($configfiles as $key=>$fieldfile) {
 			include $fieldfile;
-			$group['id'] = uniqid('wordcamp-miami-badges');
+			$group['id'] = uniqid('wordcamp-belohorizonte-badges');
 			$groups[] = $group;
 		}
 		
 			
-			echo "<div class=\"wordcamp-miami-badges-widget-config-content " . $setsize . "\">\r\n";
+			echo "<div class=\"wordcamp-belohorizonte-badges-widget-config-content " . $setsize . "\">\r\n";
 			foreach ($groups as $key=>$group) {
-				echo "<div id=\"row".self::get_field_id('__row'.$group['id'])."\" class=\"wordcamp-miami-badges-groupbox group\" " . ( !empty($instance['__cur_tab__']) ? ($instance['__cur_tab__'] == $key ? "" : "style=\"display:none;\"") : ($key === 0 ? "" : "style=\"display:none;\"" )) . ">\r\n";
+				echo "<div id=\"row".self::get_field_id('__row'.$group['id'])."\" class=\"wordcamp-belohorizonte-badges-groupbox group\" " . ( !empty($instance['__cur_tab__']) ? ($instance['__cur_tab__'] == $key ? "" : "style=\"display:none;\"") : ($key === 0 ? "" : "style=\"display:none;\"" )) . ">\r\n";
 				if(count($groups) > 1 || empty($setsize)){
 					echo "<h3>".$group['label']."</h3>";
 				}
@@ -146,7 +146,7 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 
 		for( $i=0; $i<$depth;$i++ ){
 				if($i > 0){
-					echo '  <div class="button button-primary right wordcamp-miami-badges-removeRow" style="margin:5px 5px 0;">'.__('Remove', 'wordcamp-miami-badges').'</div>';
+					echo '  <div class="button button-primary right wordcamp-belohorizonte-badges-removeRow" style="margin:5px 5px 0;">'.__('Remove', 'wordcamp-belohorizonte-badges').'</div>';
 				}			
 			echo "<div class=\"form-table rowGroup groupitems\" id=\"groupitems\" ref=\"items\">\r\n";
 				foreach($group['fields'] as $field=>$settings){
@@ -169,20 +169,20 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 					$label = (!empty($settings['caption']) ? $settings['caption'] : $settings['label']);
 					//$caption = $settings['caption'];
 									
-					echo '<div class="wordcamp-miami-badges-field-row"><p><label class="wordcamp-miami-badges_widget_label" for="'.$id.'">'.$label.'</label></p><p>';
+					echo '<div class="wordcamp-belohorizonte-badges-field-row"><p><label class="wordcamp-belohorizonte-badges_widget_label" for="'.$id.'">'.$label.'</label></p><p>';
 					include self::get_path( dirname( __FILE__ ) ) . 'includes/field-'.$settings['type'].'.php';
 					echo '</p></div>';
 				}
 			echo "</div>\r\n";
 		}
 		if(!empty($group['multiple'])){
-			echo "<div><button class=\"button wordcamp-miami-badges-add-group-row\" type=\"button\" data-field=\"".self::get_field_id('ref')."\" data-rowtemplate=\"group-".$group['id']."-tmpl\">".__('Add Another','wordcamp-miami-badges')."</button></div>\r\n";
+			echo "<div><button class=\"button wordcamp-belohorizonte-badges-add-group-row\" type=\"button\" data-field=\"".self::get_field_id('ref')."\" data-rowtemplate=\"group-".$group['id']."-tmpl\">".__('Add Another','wordcamp-belohorizonte-badges')."</button></div>\r\n";
 		}
 		
 		// Place html template for repeated fields.
 		if(!empty($group['multiple'])){
 			echo "<script type=\"text/html\" id=\"group-".$group['id']."-tmpl\">\r\n";
-			echo '  <div class="button button-primary right wordcamp-miami-badges-removeRow" style="margin:5px 5px 0;">'.__('Remove','wordcamp-miami-badges').'</div>';
+			echo '  <div class="button button-primary right wordcamp-belohorizonte-badges-removeRow" style="margin:5px 5px 0;">'.__('Remove','wordcamp-belohorizonte-badges').'</div>';
 			echo "	<div class=\"form-table rowGroup groupitems\" id=\"groupitems\" ref=\"items\">\r\n";
 				foreach($group['fields'] as $field=>$settings){
 					//dump($settings);
@@ -196,7 +196,7 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 					$label = $settings['label'];
 					$caption = $settings['caption'];
 					$value = $settings['default'];
-					echo '<div class="wordcamp-miami-badges-field-row"><label class="wordcamp-miami-badges_widget_label" for="'.$id.'">'.$label.'</label>';
+					echo '<div class="wordcamp-belohorizonte-badges-field-row"><label class="wordcamp-belohorizonte-badges_widget_label" for="'.$id.'">'.$label.'</label>';
 					include self::get_path( dirname( __FILE__ ) ) . 'includes/field-'.$settings['type'].'.php';
 					echo '</div>';
 				}
@@ -214,7 +214,7 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 	 */
 	public function widget_textdomain() {
 
-		load_plugin_textdomain( 'wordcamp-miami-badges', false, self::get_path( dirname( __FILE__ ) ) . '/languages/' );
+		load_plugin_textdomain( 'wordcamp-belohorizonte-badges', false, self::get_path( dirname( __FILE__ ) ) . '/languages/' );
 
 	} // end widget_textdomain
 
@@ -227,9 +227,9 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 		wp_enqueue_media();
 		wp_enqueue_script('media-upload');
 
-		//$configfiles = glob( self::get_path( dirname( __FILE__ ) ) .'configs/wordcamp_miami_badge-*.php' );
-		if(file_exists(self::get_path( dirname( __FILE__ ) ) .'configs/fieldgroups-wordcamp_miami_badge.php')){
-			include self::get_path( dirname( __FILE__ ) ) .'configs/fieldgroups-wordcamp_miami_badge.php';		
+		//$configfiles = glob( self::get_path( dirname( __FILE__ ) ) .'configs/wordcamp_belohorizonte_badge-*.php' );
+		if(file_exists(self::get_path( dirname( __FILE__ ) ) .'configs/fieldgroups-wordcamp_belohorizonte_badge.php')){
+			include self::get_path( dirname( __FILE__ ) ) .'configs/fieldgroups-wordcamp_belohorizonte_badge.php';		
 		}else{
 			return;
 		}
@@ -237,18 +237,18 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 			include $fieldfile;
 			if(!empty($group['scripts'])){
 				foreach($group['scripts'] as $script){
-					wp_enqueue_script( 'wordcamp-miami-badges-'.strtok($script, '.'), self::get_url( 'assets/js/'.$script , dirname(__FILE__) ) , array('jquery') );					
+					wp_enqueue_script( 'wordcamp-belohorizonte-badges-'.strtok($script, '.'), self::get_url( 'assets/js/'.$script , dirname(__FILE__) ) , array('jquery') );					
 				}
 			}
 			if(!empty($group['styles'])){
 				foreach($group['styles'] as $style){
-					wp_enqueue_style( 'wordcamp-miami-badges-'.strtok($style, '.'), self::get_url( 'assets/css/'.$style , dirname(__FILE__) ) );
+					wp_enqueue_style( 'wordcamp-belohorizonte-badges-'.strtok($style, '.'), self::get_url( 'assets/css/'.$style , dirname(__FILE__) ) );
 				}
 			}
 		}
 
-		wp_enqueue_style( 'wordcamp-miami-badges-panel-styles', self::get_url( 'assets/css/panel.css', dirname(__FILE__) ) );
-		wp_enqueue_script( 'wordcamp-miami-badges-panel-script', self::get_url( 'assets/js/panel.js', dirname(__FILE__) ), array( 'jquery' ) );
+		wp_enqueue_style( 'wordcamp-belohorizonte-badges-panel-styles', self::get_url( 'assets/css/panel.css', dirname(__FILE__) ) );
+		wp_enqueue_script( 'wordcamp-belohorizonte-badges-panel-script', self::get_url( 'assets/js/panel.js', dirname(__FILE__) ), array( 'jquery' ) );
 
 
 	} // end register_admin_styles
@@ -265,9 +265,9 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 					foreach($widget_settings as $key=>$settings){
 						if(in_array($this->id_base.'-'.$key,$sidebar)){
 							if(empty($element)){
-								$element = Wordcamp_Miami_Badges::get_instance();
+								$element = WordCamp_Belohorizonte_Badges::get_instance();
 							}
-							echo $element->render_element($settings, '', 'wordcamp_miami_badge', true);
+							echo $element->render_element($settings, '', 'wordcamp_belohorizonte_badge', true);
 
 						}
 					}
@@ -307,4 +307,4 @@ class Widget_wordcamp_miami_badge extends WP_Widget {
 	
 } // end class
 
-add_action( 'widgets_init', create_function( '', 'register_widget("Widget_wordcamp_miami_badge");' ) );
+add_action( 'widgets_init', create_function( '', 'register_widget("Widget_wordcamp_belohorizonte_badge");' ) );

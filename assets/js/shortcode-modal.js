@@ -1,20 +1,20 @@
 
 jQuery(function($){
 	var selection = false;
-	var wordcamp_miami_badgesShortcodePanel = $('#wordcamp-miami-badges-shortcode-panel-tmpl').html();
+	var wordcamp_belohorizonte_badgesShortcodePanel = $('#wordcamp-belohorizonte-badges-shortcode-panel-tmpl').html();
 
-	$('body').append(wordcamp_miami_badgesShortcodePanel);
+	$('body').append(wordcamp_belohorizonte_badgesShortcodePanel);
 	$('.media-modal-backdrop, .media-modal-close').on('click', function(){
-		wordcamp_miami_badges_hideModal();
+		wordcamp_belohorizonte_badges_hideModal();
 	})
 	$(document).keyup(function(e) {
 		if (e.keyCode == 27) {
-			wordcamp_miami_badges_hideModal();
+			wordcamp_belohorizonte_badges_hideModal();
 		}
 	});
 
 	// show modal
-	$('#wordcamp-miami-badges-shortcodeinsert').click(function(){
+	$('#wordcamp-belohorizonte-badges-shortcodeinsert').click(function(){
 
 		if($(this).data('shortcode')){
 			window.send_to_editor('['+$(this).data('shortcode')+']');
@@ -22,18 +22,18 @@ jQuery(function($){
 		}
 				
 		// autoload item
-		var autoload = $('.wordcamp-miami-badges-autoload');
+		var autoload = $('.wordcamp-belohorizonte-badges-autoload');
 		if(autoload.length){
-			wordcamp_miami_badges_loadtemplate(autoload.data('shortcode'));
+			wordcamp_belohorizonte_badges_loadtemplate(autoload.data('shortcode'));
 		}
-		$('#wordcamp-miami-badges-category-selector').on('change', function(){
-			wordcamp_miami_badges_loadtemplate('');
-			$('.wordcamp-miami-badges-elements-selector').hide();
-			$('#wordcamp-miami-badges-elements-selector-'+this.value).show().val('');
+		$('#wordcamp-belohorizonte-badges-category-selector').on('change', function(){
+			wordcamp_belohorizonte_badges_loadtemplate('');
+			$('.wordcamp-belohorizonte-badges-elements-selector').hide();
+			$('#wordcamp-belohorizonte-badges-elements-selector-'+this.value).show().val('');
 		});
 
-		$('.wordcamp-miami-badges-elements-selector').on('change', function(){
-			wordcamp_miami_badges_loadtemplate(this.value);
+		$('.wordcamp-belohorizonte-badges-elements-selector').on('change', function(){
+			wordcamp_belohorizonte_badges_loadtemplate(this.value);
 		});
 
 		if(typeof tinyMCE !== 'undefined'){
@@ -46,16 +46,16 @@ jQuery(function($){
 			selection = false;
 		}
 		if(selection.length > 0){
-			$('#wordcamp-miami-badges-content').html(selection);
+			$('#wordcamp-belohorizonte-badges-content').html(selection);
 		}
-		$('#wordcamp-miami-badges-shortcode-panel').show();
+		$('#wordcamp-belohorizonte-badges-shortcode-panel').show();
 	});
-	$('#wordcamp-miami-badges-insert-shortcode').on('click', function(){
-		wordcamp_miami_badges_sendCode();
+	$('#wordcamp-belohorizonte-badges-insert-shortcode').on('click', function(){
+		wordcamp_belohorizonte_badges_sendCode();
 	})
 	// modal tabs
-	$('#wordcamp-miami-badges-shortcode-config').on('click', '.wordcamp-miami-badges-shortcode-config-nav li a', function(){
-		$('.wordcamp-miami-badges-shortcode-config-nav li').removeClass('current');
+	$('#wordcamp-belohorizonte-badges-shortcode-config').on('click', '.wordcamp-belohorizonte-badges-shortcode-config-nav li a', function(){
+		$('.wordcamp-belohorizonte-badges-shortcode-config-nav li').removeClass('current');
 		$('.group').hide();
 		$(''+$(this).attr('href')+'').show();
 		$(this).parent().addClass('current');
@@ -65,27 +65,27 @@ jQuery(function($){
 
 });
 
-function wordcamp_miami_badges_loadtemplate(shortcode){
-	var target = jQuery('#wordcamp-miami-badges-shortcode-config');
+function wordcamp_belohorizonte_badges_loadtemplate(shortcode){
+	var target = jQuery('#wordcamp-belohorizonte-badges-shortcode-config');
 	if(shortcode.length <= 0){
 		target.html('');
 	}
-	target.html(jQuery('#wordcamp-miami-badges-'+shortcode+'-config-tmpl').html());
+	target.html(jQuery('#wordcamp-belohorizonte-badges-'+shortcode+'-config-tmpl').html());
 }
 
-function wordcamp_miami_badges_sendCode(){
+function wordcamp_belohorizonte_badges_sendCode(){
 
-	var shortcode = jQuery('#wordcamp-miami-badges-shortcodekey').val(),
+	var shortcode = jQuery('#wordcamp-belohorizonte-badges-shortcodekey').val(),
 		output = '['+shortcode,
 		ctype = '',
 		fields = {};
 	
 	if(shortcode.length <= 0){return; }
 
-	if(jQuery('#wordcamp-miami-badges-shortcodetype').val() === '2'){
-		ctype = jQuery('#wordcamp-miami-badges-default-content').val()+'[/'+shortcode+']';
+	if(jQuery('#wordcamp-belohorizonte-badges-shortcodetype').val() === '2'){
+		ctype = jQuery('#wordcamp-belohorizonte-badges-default-content').val()+'[/'+shortcode+']';
 	}
-	jQuery('#wordcamp-miami-badges-shortcode-config input,#wordcamp-miami-badges-shortcode-config select,#wordcamp-miami-badges-shortcode-config textarea').not('.configexclude').each(function(){
+	jQuery('#wordcamp-belohorizonte-badges-shortcode-config input,#wordcamp-belohorizonte-badges-shortcode-config select,#wordcamp-belohorizonte-badges-shortcode-config textarea').not('.configexclude').each(function(){
 		if(this.value){
 			// see if its a checkbox
 			var thisinput = jQuery(this),
@@ -125,14 +125,14 @@ function wordcamp_miami_badges_sendCode(){
 			output += ' '+field+'="'+fields[field]+'"';
 		}
 	}
-	wordcamp_miami_badges_hideModal();
+	wordcamp_belohorizonte_badges_hideModal();
 	window.send_to_editor(output+']'+ctype);
 
 }
-function wordcamp_miami_badges_hideModal(){
-	jQuery('#wordcamp-miami-badges-shortcode-panel').hide();
-	wordcamp_miami_badges_loadtemplate('');
-	jQuery('#wordcamp-miami-badges-elements-selector').show();
-	jQuery('.wordcamp-miami-badges-elements-selector').val('');	
-	jQuery('#wordcamp-miami-badges-category-selector').val('');
+function wordcamp_belohorizonte_badges_hideModal(){
+	jQuery('#wordcamp-belohorizonte-badges-shortcode-panel').hide();
+	wordcamp_belohorizonte_badges_loadtemplate('');
+	jQuery('#wordcamp-belohorizonte-badges-elements-selector').show();
+	jQuery('.wordcamp-belohorizonte-badges-elements-selector').val('');	
+	jQuery('#wordcamp-belohorizonte-badges-category-selector').val('');
 }

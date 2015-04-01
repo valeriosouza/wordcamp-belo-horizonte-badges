@@ -1,6 +1,6 @@
 <?php
 	if(empty($settings['default'])){
-		$settings['default'] = '*true||'.__('On', 'wordcamp-miami-badges').',false||'.__('Off', 'wordcamp-miami-badges');
+		$settings['default'] = '*true||'.__('On', 'wordcamp-belohorizonte-badges').',false||'.__('Off', 'wordcamp-belohorizonte-badges');
 		if(empty($value)){
 			$value = $settings['default'];
 		}
@@ -11,7 +11,7 @@
 	$default = null;
 ?>
 <span class="toggle-group">
-	<span class="toggle-group-buttons wordcamp_miami_badges-toggle-group-buttons">
+	<span class="toggle-group-buttons wordcamp_belohorizonte_badges-toggle-group-buttons">
 		<?php foreach($parts as $part){
 				$toggle = explode('||', $part);
 				$isSet = '';
@@ -35,5 +35,5 @@
 			}
 		?>
 	</span>
-	<input name="<?php echo $name; ?>" class="wordcamp_miami_badges_toggle_field" type="hidden" ref="<?php echo $groupid; ?>" id="<?php echo $id; ?>" value="<?php echo sanitize_text_field( $value ); ?>">
+	<input name="<?php echo $name; ?>" class="wordcamp_belohorizonte_badges_toggle_field" type="hidden" ref="<?php echo $groupid; ?>" id="<?php echo $id; ?>" value="<?php echo sanitize_text_field( $value ); ?>">
 </span>
