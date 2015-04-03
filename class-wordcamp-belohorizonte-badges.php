@@ -3,7 +3,7 @@
  * WordCamp Belo Horizonte Badges.
  *
  * @package   WordCamp_Belohorizonte_Badges
- * @author    Myles McNamara <myles@smyl.es>
+ * @author    Myles McNamara <myles@smyl.es>, Valerio Souza <eu@valeriosouza.com.br>
  * @license   GPL-2.0+
  * @link      http://smyl.es
  * @copyright 2015 Myles McNamara
@@ -19,7 +19,7 @@ class WordCamp_Belohorizonte_Badges {
 	/**
 	 * @var     string
 	 */
-	const VERSION = '1.0.3';
+	const VERSION = '1.0.0';
 	/**
 	 * @var      string
 	 */

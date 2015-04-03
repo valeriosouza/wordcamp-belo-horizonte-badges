@@ -8,15 +8,15 @@
  *
  * @wordpress-plugin
  * Plugin Name: WordCamp Belo Horizonte Badges
- * Plugin URI:  http://github.com/tripflex/wordcamp-belohorizonte-badges
+ * Plugin URI:  https://github.com/valeriosouza/wordcamp-belo-horizonte-badges
  * Description: Display 2015 WordCamp Belo Horizonte badges on your site with Shortcode or Widget
- * Version:     1.0.3
- * Author:      Myles McNamara
- * Author URI:  http://smyl.es
+ * Version:     1.0.0
+ * Author:      Valerio Souza
+ * Author URI:  http://valeriosouza.com.br
  * Text Domain: wordcamp-belohorizonte-badges
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * GitHub Plugin URI: tripflex/wordcamp-belohorizonte-badges
+ * GitHub Plugin URI: valeriosouza/wordcamp-belohorizonte-badges
  * GitHub Branch:   master
  * Domain Path: /languages
  */
